@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="YDrive.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid
+        x:Name="ContentArea"
+        Margin="{StaticResource MediumLeftRightMargin}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition x:Name="TitleRow" Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock
+            x:Name="TitlePage"
+            x:Uid="Main_Title"
+            Text="Navigation Item 2"
+            Style="{StaticResource PageTitleStyle}" />
+
+        <Grid 
+            Grid.Row="1" 
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" HorizontalAlignment="Stretch">
+            <Image HorizontalAlignment="Center" Height="100" Margin="700,425,676,427" VerticalAlignment="Center" Width="100" Source="ms-appx:///Assets/FolderIcon640x555.png"/>
+            <!--The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.-->
+        </Grid>
+        <Grid AllowDrop="True" DragOver="Grid_DragOver" Drop="Grid_Drop"
+      Background="LightBlue" Margin="10,10,10,353">
+            <TextBlock>Drop anywhere in the blue area</TextBlock>
+        </Grid>
+    </Grid>
+</Page>
+
